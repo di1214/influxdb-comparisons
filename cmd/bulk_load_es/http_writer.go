@@ -46,7 +46,7 @@ func NewHTTPWriter(c HTTPWriterConfig, refreshEachBatch bool) *HTTPWriter {
 
 var (
 	post      = []byte("POST")
-	textPlain = []byte("text/plain")
+	textPlain = []byte("application/json")
 )
 
 // WriteLineProtocol writes the given byte slice to the HTTP server described in the Writer's HTTPWriterConfig.
