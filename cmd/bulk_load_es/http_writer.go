@@ -57,9 +57,6 @@ func (w *HTTPWriter) WriteLineProtocol(body []byte, isGzip bool) (int64, error) 
 	req.Header.SetContentTypeBytes(textPlain)
 	req.Header.SetMethodBytes(post)
 	req.Header.SetRequestURIBytes(w.url)
-	if isGzip {
-		req.Header.Add("Content-Encoding", "gzip")
-	}
 	req.SetBody(body)
 
 	resp := fasthttp.AcquireResponse()
