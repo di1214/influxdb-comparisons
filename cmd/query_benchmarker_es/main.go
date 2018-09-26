@@ -243,7 +243,7 @@ func main() {
 			BurnIn: int64(burnIn),
 		}
 		stat := statMapping[allQueriesLabel]
-		err = report.ReportQueryResult(reportParams, stat.Min, stat.Mean, stat.Max, stat.Count, wallTook)
+		err = report.ReportQueryResult(reportParams, "es", stat.Min, stat.Mean, stat.Max, stat.Count, wallTook)
 
 		if err != nil {
 			log.Fatal(err)
